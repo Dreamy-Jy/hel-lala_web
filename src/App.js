@@ -3,6 +3,7 @@ import React, {Component} from 'react';
 import AuthorizeButton from './Components/AuthorizeButton';
 import SignOutButton from './Components/SignOutButton';
 import AdderForm from './Components/AdderForm';
+import EventDisplayer from './Components/EventDisplayer';
 /* import gapi from 'gapi';
 
 Jordane-note:
@@ -52,13 +53,10 @@ import './App.css';
       return (
       <div className="App">
         <p>Google Calendar API Quickstart</p>
-
         <AuthorizeButton />
         <SignOutButton />
         <AdderForm />
-
-        <pre id="content"></pre>
-
+        <EventDisplayer />
       </div>);
     }
   }
