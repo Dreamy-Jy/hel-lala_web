@@ -2,6 +2,7 @@
 import React, {Component} from 'react';
 import AuthorizeButton from './Components/AuthorizeButton';
 import SignOutButton from './Components/SignOutButton';
+import AdderForm from './Components/AdderForm'
 /* import gapi from 'gapi';
 
 Jordane-note:
@@ -28,10 +29,6 @@ import './App.css';
       gapi.load('client:auth2', this.initClient);
     }
 
-    componentDidMount() {
-
-    }
-
     /*
     in this callback this does not refer to the component
     */
@@ -51,38 +48,14 @@ import './App.css';
       // });
     }
 
-    /**
-     *  Sign in the user upon button click.
-     */
-
-    /**
-     *  Sign out the user upon button click.
-     */
-    handleSignoutClick(event) {
-      gapi.auth2.getAuthInstance().signOut();
-    }
-
-    updateSigninStatus(isSignedIn) {
-      if (isSignedIn) {
-        this.state.authorizeButton.style.display = 'none';
-        this.state.signoutButton.style.display = 'block';
-      } else {
-        this.state.authorizeButton.style.display = 'block';
-        this.state.signoutButton.style.display = 'none';
-      }
-    }
-
-
     render() {
-      return (<div className="App">
+      return (
+      <div className="App">
         <p>Google Calendar API Quickstart</p>
 
         <AuthorizeButton />
         <SignOutButton />
-        <form className="mkEvnt">
-          <input type="text" id="txtBx" placeholder="Enter Event Name"/>
-          <input type="button" value="submit"/>
-        </form>
+        <AdderForm />
 
         <pre id="content"></pre>
 
