@@ -1,4 +1,4 @@
-/*global gapi*/
+',,'/*global gapi*/
 import React, {Component} from 'react';
 import AuthorizeButton from './Components/AuthorizeButton';
 import SignOutButton from './Components/SignOutButton';
@@ -76,12 +76,13 @@ import './App.css';
     render() {
       return (<div className="App">
         <p>Google Calendar API Quickstart</p>
-
+        <AddEvents />
         <AuthorizeButton />
         <SignOutButton />
         <form className="mkEvnt">
           <input type="text" id="txtBx" placeholder="Enter Event Name"/>
           <input type="button" value="submit"/>
+          <input type ="text" id="2txtBx" placeholder="Enter Event Time"/>
         </form>
 
         <pre id="content"></pre>
