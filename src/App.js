@@ -2,7 +2,7 @@
 import React, {Component} from 'react';
 import AuthorizeButton from './Components/AuthorizeButton';
 import SignOutButton from './Components/SignOutButton';
-import AdderForm from './Components/AdderForm'
+import AdderForm from './Components/AdderForm';
 /* import gapi from 'gapi';
 
 Jordane-note:

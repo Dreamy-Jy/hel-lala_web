@@ -48,12 +48,6 @@ from a string. */
       request.execute(function(event) {
         alert("I worked");
       });
-
-      this.setState({
-        eventSubject: "",
-        startTime: "",
-        endTime: ""
-      });
     } else {
       alert("didn't work fam");
     }
