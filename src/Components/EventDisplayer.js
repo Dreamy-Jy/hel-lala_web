@@ -20,7 +20,7 @@ class EventDisplayer extends Component {
       'maxResults': 10,
       'orderBy': 'startTime'
     }).then(function(response) {
-      list = response.items
+      list = response.items;
     })
 
     this.setState({
