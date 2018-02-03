@@ -10,6 +10,7 @@ class EventDisplayer extends Component {
     };
 
   }
+
   componentDidMount() {
     var list = null;
     gapi.client.calendar.events.list({
@@ -25,16 +26,23 @@ class EventDisplayer extends Component {
 
     this.setState({
       events: list
-    })
+    });
     console.log(this.state.events);
   }
-render(){
-  return (
-    <section>
-      Hello Events
-    </section>
-  )
-}}
 
+  render() {
+    if (this.state.events.length <= 0) {
+      return (
+        <section>
+          Hello Events
+        </section>);
+    } else {
+      return (
+        <section>
+          {this.state.events.length}
+        </section>);
+    }
+  }
+}
 
 export default EventDisplayer;
