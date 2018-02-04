@@ -15,7 +15,7 @@ import './App.css';
       return (
       <div className="App">
         <Switch>
-          <Route exact path="/" component={LoginPage} />
+          <Route path="/" component={LoginPage} />
           <Route path="/profile" component={ProfilePage} />
         </Switch>
       </div>);

@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
-import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
+import {Route, Link, Switch} from 'react-router-dom';
+import AuthForm from "./AuthForm";
 
 class LoginPage extends Component {
   constructor(props) {
@@ -7,13 +8,27 @@ class LoginPage extends Component {
   }
 
   render() {
+    const LoginForm = () => {
+      return (<AuthForm buttonText="Login"/>);
+    };
+
+    const RegisterForm = () => {
+      return (<AuthForm buttonText="Sign Up" />);
+    };
+
+
     return (
       <main>
-        <h1>Hel'lala: Welcome are you new here?</h1>
-        <p>Hel'lala: Introduce yourself </p>
-        <Link to="/profile">
-          <button>Hi Hel'lala</button>
+        <h1>Welcome Login or Sign-Up</h1>
+        <Link to="/login">
+          <button>Login</button>
         </Link>
+        <Link to="/signup">
+          <button>Sign Up</button>
+        </Link>
+
+        <Route exact to="/signup" component={RegisterForm} />
+        <Route exact to="/login" component={LoginForm} />
       </main>);
   }
 }
